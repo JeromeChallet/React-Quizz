@@ -1,0 +1,13 @@
+{
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "data/questions.json",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [{ "src": "/api/questions", "dest": "/data/questions.json" }]
+}
